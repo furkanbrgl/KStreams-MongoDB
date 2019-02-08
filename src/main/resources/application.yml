@@ -1,0 +1,23 @@
+mongoDB:
+  hosts: "localhost"
+  port: 27017
+  username:
+  password:
+  database:
+    connectionDB: admin
+    subscriptionsDB: subscription
+  collection:
+    subscriber: subscriptions
+
+topic: "TEST_TOPIC"
+
+kstreamsConfig:
+  applicationId: "groupIdTest" # will not be used.
+  bootstrapServerConfig: "localhost:9092"
+  replicationFactor: 1
+  commitInterval: 2000
+
+kconsumerConfig:
+  commitInterval: 1000
+  offsetReset: "earliest"
+  maxAgeConfig: 15000
